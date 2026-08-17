@@ -1,0 +1,256 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "eaf5aee8073b5f1147e9",
+  "displayName": "Page 1",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "autoPageGenerationConfig": {
+    "selectedFields": [
+      {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "fact_sale"
+            }
+          },
+          "Property": "DeliveryDateKey"
+        }
+      },
+      {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "fact_sale"
+                }
+              },
+              "Property": "TotalExcludingTax"
+            }
+          },
+          "Function": 0
+        }
+      }
+    ],
+    "visualContainerConfigurations": [
+      {
+        "name": "3841af38a093a36557d9",
+        "fields": [
+          {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "fact_sale"
+                }
+              },
+              "Property": "DeliveryDateKey"
+            }
+          },
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "TotalExcludingTax"
+                }
+              },
+              "Function": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "298c2e6fbc046139ad90",
+        "fields": [
+          {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "fact_sale"
+                }
+              },
+              "Property": "InvoiceDateKey"
+            }
+          },
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "TotalExcludingTax"
+                }
+              },
+              "Function": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "f75df83b0ef7119ac5d1",
+        "fields": [
+          {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "fact_sale"
+                }
+              },
+              "Property": "DeliveryDateKey"
+            }
+          },
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "UnitPrice"
+                }
+              },
+              "Function": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "8cf17a3d80f1e12c4b88",
+        "fields": [
+          {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "fact_sale"
+                }
+              },
+              "Property": "DeliveryDateKey"
+            }
+          },
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "WWIInvoiceID"
+                }
+              },
+              "Function": 5
+            }
+          }
+        ]
+      },
+      {
+        "name": "992f631cbef69ce1ea46",
+        "fields": []
+      },
+      {
+        "name": "a2ef78bf634b4d551419",
+        "fields": []
+      },
+      {
+        "name": "3c7e804211797cb866be",
+        "fields": []
+      },
+      {
+        "name": "1f1dde05a32640931faa",
+        "fields": []
+      },
+      {
+        "name": "c4e0ddc28e2e63007249",
+        "fields": []
+      },
+      {
+        "name": "b7dc7e218d0df0201a93",
+        "fields": []
+      },
+      {
+        "name": "3b230b30bd01c60a11b5",
+        "fields": []
+      },
+      {
+        "name": "5c83903e4adfe5011737",
+        "fields": [
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "TotalExcludingTax"
+                }
+              },
+              "Function": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "7a1f508af68a1a67757d",
+        "fields": [
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "UnitPrice"
+                }
+              },
+              "Function": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "f8e4a3396e1077693af3",
+        "fields": [
+          {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sale"
+                    }
+                  },
+                  "Property": "WWIInvoiceID"
+                }
+              },
+              "Function": 5
+            }
+          }
+        ]
+      },
+      {
+        "name": "2cf279e8d8090d18814d",
+        "fields": []
+      }
+    ],
+    "layout": {
+      "related": {
+        "version": 1
+      }
+    }
+  }
+}
