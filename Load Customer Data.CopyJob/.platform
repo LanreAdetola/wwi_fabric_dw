@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "CopyJob",
+    "displayName": "Load Customer Data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "65c7bd55-b4c2-a9c2-4a7d-12a5d18e15ba"
+  }
+}

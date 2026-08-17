@@ -1,0 +1,199 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "Parquet",
+      "connectionSettings": {
+        "type": "AzureBlobStorage",
+        "typeProperties": {
+          "containerUri": "https://fabrictutorialdata.blob.core.windows.net/sampledata"
+        }
+      }
+    },
+    "destination": {
+      "type": "DataWarehouseTable",
+      "connectionSettings": {
+        "type": "DataWarehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "8b161c1e-69f8-81a2-4498-85478138408e",
+          "endPoint": "b2jp55aoputevbzgphe7r6h4fq-xlofxbrtt3kungeqs5yaqo5lcu.datawarehouse.fabric.microsoft.com"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00",
+      "retry": 0
+    }
+  },
+  "activities": [
+    {
+      "id": "a6131a5a-8ed8-49d6-bd91-28b83a379d6c",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "sampledata"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": true,
+            "wildcardFolderPath": "WideWorldImportersDW/parquet/full/dimension_city",
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "dimension_city"
+          }
+        },
+        "enableStaging": false
+      }
+    },
+    {
+      "id": "48461fe5-fcf4-475e-be66-edf089e92594",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "sampledata"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": true,
+            "wildcardFolderPath": "WideWorldImportersDW/parquet/full/dimension_customer",
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "dimension_customer"
+          }
+        },
+        "enableStaging": false
+      }
+    },
+    {
+      "id": "31c747f6-46f8-48af-bdea-e8e170716a8a",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "sampledata"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": true,
+            "wildcardFolderPath": "WideWorldImportersDW/parquet/full/dimension_date",
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "dimension_date"
+          }
+        },
+        "enableStaging": false
+      }
+    },
+    {
+      "id": "e05a2b29-7b00-4a10-b860-997ddfe6ca1e",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "sampledata"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": true,
+            "wildcardFolderPath": "WideWorldImportersDW/parquet/full/dimension_employee",
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "dimension_employee"
+          }
+        },
+        "enableStaging": false
+      }
+    },
+    {
+      "id": "8fbb0c08-0161-4951-968e-73f90c99163f",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "sampledata"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": true,
+            "wildcardFolderPath": "WideWorldImportersDW/parquet/full/dimension_stock_item",
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "dimension_stock_item"
+          }
+        },
+        "enableStaging": false
+      }
+    },
+    {
+      "id": "d0dcb01c-7966-4e82-bf4c-0d5a70aae321",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "container": "sampledata"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": true,
+            "wildcardFolderPath": "WideWorldImportersDW/parquet/full/fact_sale",
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "fact_sale"
+          }
+        },
+        "enableStaging": false
+      }
+    }
+  ]
+}
